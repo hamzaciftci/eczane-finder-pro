@@ -12,11 +12,15 @@ export interface District {
 export interface Pharmacy {
   name: string;
   address: string;
+  addressDetail?: string;
   phone: string;
   district: string;
   lat?: number;
   lng?: number;
   distance?: number;
+  source?: string;
+  lastUpdated?: string;
+  verificationCount?: number;
 }
 
 export interface PharmacyResponse {
@@ -25,4 +29,5 @@ export interface PharmacyResponse {
   date: string;
   lastUpdated: string;
   pharmacies: Pharmacy[];
+  verified: boolean;
 }
